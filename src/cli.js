@@ -1,10 +1,10 @@
-const {amplify} = require('./easy-amplify-core');
+const {amplify} = require('./core');
 const argv = require('minimist')(process.argv.slice(2));
 const steps = require('./default-steps.js')
 
 function printUsage() {
   let usage = `
-Usage: ./easy-amplify --url=[URL]
+Usage: ./amp-prototyper --url=[URL]
 
 Required:
   --url=URL\tURL to the page to convert.
@@ -16,16 +16,16 @@ Options:
 
 Examples:
   # Amplify a page and generate results in /output folder.
-  ./easy-amplify --url=http://127.0.0.1:8080
+  ./amp-prototyper --url=http://127.0.0.1:8080
 
   # Amplify a page and generate results in /output/test folder.
-  ./easy-amplify --url=http://127.0.0.1:8080 --output=test
+  ./amp-prototyper --url=http://127.0.0.1:8080 --output=test
 
   # Amplify a page with customized steps.
-  ./easy-amplify --url=http://127.0.0.1:8080 --steps=custom/mysteps.js
+  ./amp-prototyper --url=http://127.0.0.1:8080 --steps=custom/mysteps.js
 
   # Amplify a page and display AMP validation details.
-  ./easy-amplify --url=http://127.0.0.1:8080 --verbose
+  ./amp-prototyper --url=http://127.0.0.1:8080 --verbose
   `;
   console.log(usage);
 }

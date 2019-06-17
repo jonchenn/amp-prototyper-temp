@@ -1,4 +1,4 @@
-# easy-amplify
+# amp-prototyper
 
 This Node.js-based script aims to automate the process of converting a HTML page
 to a [Accelerated Mobile Page (AMP)](https://www.ampproject.org). It follows
@@ -10,7 +10,7 @@ to a [Accelerated Mobile Page (AMP)](https://www.ampproject.org). It follows
 * It generates a converted AMP, a screenshot, and AMP validation errors for each step.
 * You can customize steps for specific scenarios.
 
-### What is easy-amplify
+### What is amp-prototyper
 
 The main goal is to minimize the effort of converting HTML to AMP, including
 adding AMP boilerplate, removing custom Javascript, making all CSS inline, etc.
@@ -29,15 +29,15 @@ and render pages.
 Run the following to run the script locally.
 
 ```
-git clone https://github.com/jonchenn/easy-amplify.git
-cd easy-amplify
+git clone https://github.com/jonchenn/amp-prototyper.git
+cd amp-prototyper
 yarn install
 ```
 
 ### Usage
 
 ```
-./easy-amplify --url=[URL]
+./amp-prototyper --url=[URL]
 ```
 
 Required arguments:
@@ -55,22 +55,22 @@ Required arguments:
 
 ```
 # Amplify a page and generate results in /output folder.
-./easy-amplify --url=http://127.0.0.1:8080
+./amp-prototyper --url=http://127.0.0.1:8080
 
 # Amplify a page and generate results in /output/test folder.
-./easy-amplify --url=http://127.0.0.1:8080 --output=test
+./amp-prototyper --url=http://127.0.0.1:8080 --output=test
 
 # Amplify a page with customized steps.
-./easy-amplify --url=http://127.0.0.1:8080 --steps=custom/mysteps.js
+./amp-prototyper --url=http://127.0.0.1:8080 --steps=custom/mysteps.js
 
 # Amplify a page and display AMP validation details.
-./easy-amplify --url=http://127.0.0.1:8080 --verbose
+./amp-prototyper --url=http://127.0.0.1:8080 --verbose
 
 # Amplify a page and generate screenshots with specific Device.
-./easy-amplify --url=http://127.0.0.1:8080 --device='Pixel 2'
+./amp-prototyper --url=http://127.0.0.1:8080 --device='Pixel 2'
 
 # Amplify a page and display browser.
-./easy-amplify --url=http://127.0.0.1:8080 --headless=false
+./amp-prototyper --url=http://127.0.0.1:8080 --headless=false
 ```
 
 ### Test with a sample HTML.
@@ -83,12 +83,12 @@ yarn sample
 ```
 
 This opens up a localhost web server at http://127.0.0.1:8080 by default that
-serves [test/index.html](https://github.com/jonchenn/easy-amplify/blob/master/test/index.html).
-This is a quick and simple HTML page to test easy-amplify. You can run the following to see how easy-amplify works.
+serves [test/index.html](https://github.com/jonchenn/amp-prototyper/blob/master/test/index.html).
+This is a quick and simple HTML page to test amp-prototyper. You can run the following to see how amp-prototyper works.
 
 ```
 # Amplify the page at localhost and output in sample/ folder.
-./easy-amplify --url=http://127.0.0.1:8080 --output=sample
+./amp-prototyper --url=http://127.0.0.1:8080 --output=sample
 ```
 
 Then, check out the `./output/sample`, and you will see a list of output files.
@@ -96,20 +96,20 @@ Then, check out the `./output/sample`, and you will see a list of output files.
 ## Output of each step
 
 When you run the script, it follows predefined steps, either default steps
-at [src/default-steps.js](https://github.com/jonchenn/easy-amplify/blob/master/src/default-steps.js), or customized steps.
+at [src/default-steps.js](https://github.com/jonchenn/amp-prototyper/blob/master/src/default-steps.js), or customized steps.
 
 You can amplify a HTML page with default steps:
 
 ```
 # Amplify a page with default steps.
-./easy-amplify --url=http://127.0.0.1:8080
+./amp-prototyper --url=http://127.0.0.1:8080
 ```
 
 Or run amplify a page with customized steps:
 
 ```
 # Amplify a page with customized steps.
-./easy-amplify --url=http://127.0.0.1:8080 --steps=custom/mysteps.js
+./amp-prototyper --url=http://127.0.0.1:8080 --steps=custom/mysteps.js
 ```
 
 At each step, it executes a set of actions and writes the files below to the
@@ -125,7 +125,7 @@ name of the output folder.
 
 ### Structure of steps
 
-You can check out the default steps at [src/default-steps.js](https://github.com/jonchenn/easy-amplify/blob/master/src/default-steps.js).
+You can check out the default steps at [src/default-steps.js](https://github.com/jonchenn/amp-prototyper/blob/master/src/default-steps.js).
 
 Each step follows the structure below.
 
@@ -348,7 +348,7 @@ Next, run the script with `--steps=/path/to/mysteps.js`:
 
 ```
 # Amplify a page with customized steps.
-./easy-amplify --url=http://127.0.0.1:8080 --steps=/path/to/mysteps.js
+./amp-prototyper --url=http://127.0.0.1:8080 --steps=/path/to/mysteps.js
 ```
 
 ## Reference
