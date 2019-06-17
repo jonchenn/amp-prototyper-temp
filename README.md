@@ -37,7 +37,7 @@ yarn install
 ### Usage
 
 ```
-yarn start --url=[URL]
+./easy-amplify --url=[URL]
 ```
 
 Required arguments:
@@ -55,22 +55,22 @@ Required arguments:
 
 ```
 # Amplify a page and generate results in /output folder.
-yarn start --url=http://127.0.0.1:8080
+./easy-amplify --url=http://127.0.0.1:8080
 
 # Amplify a page and generate results in /output/test folder.
-yarn start --url=http://127.0.0.1:8080 --output=test
+./easy-amplify --url=http://127.0.0.1:8080 --output=test
 
 # Amplify a page with customized steps.
-yarn start --url=http://127.0.0.1:8080 --steps=custom/mysteps.js
+./easy-amplify --url=http://127.0.0.1:8080 --steps=custom/mysteps.js
 
 # Amplify a page and display AMP validation details.
-yarn start --url=http://127.0.0.1:8080 --verbose
+./easy-amplify --url=http://127.0.0.1:8080 --verbose
 
 # Amplify a page and generate screenshots with specific Device.
-yarn start --url=http://127.0.0.1:8080 --device='Pixel 2'
+./easy-amplify --url=http://127.0.0.1:8080 --device='Pixel 2'
 
 # Amplify a page and display browser.
-yarn start --url=http://127.0.0.1:8080 --headless=false
+./easy-amplify --url=http://127.0.0.1:8080 --headless=false
 ```
 
 ### Test with a sample HTML.
@@ -88,7 +88,7 @@ This is a quick and simple HTML page to test easy-amplify. You can run the follo
 
 ```
 # Amplify the page at localhost and output in sample/ folder.
-yarn start --url=http://127.0.0.1:8080 --output=sample
+./easy-amplify --url=http://127.0.0.1:8080 --output=sample
 ```
 
 Then, check out the `./output/sample`, and you will see a list of output files.
@@ -102,14 +102,14 @@ You can amplify a HTML page with default steps:
 
 ```
 # Amplify a page with default steps.
-yarn start --url=http://127.0.0.1:8080
+./easy-amplify --url=http://127.0.0.1:8080
 ```
 
 Or run amplify a page with customized steps:
 
 ```
 # Amplify a page with customized steps.
-yarn start --url=http://127.0.0.1:8080 --steps=custom/mysteps.js
+./easy-amplify --url=http://127.0.0.1:8080 --steps=custom/mysteps.js
 ```
 
 At each step, it executes a set of actions and writes the files below to the
@@ -348,7 +348,7 @@ Next, run the script with `--steps=/path/to/mysteps.js`:
 
 ```
 # Amplify a page with customized steps.
-yarn start --url=http://127.0.0.1:8080 --steps=/path/to/mysteps.js
+./easy-amplify --url=http://127.0.0.1:8080 --steps=/path/to/mysteps.js
 ```
 
 ## Reference
